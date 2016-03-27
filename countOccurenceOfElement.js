@@ -10,7 +10,7 @@ var countOccurence = function(array, target) {
   var result = 0;
   debugger;
   var innerFunction = function(arr, tgt) {
-    for(var i=0; i < array.length; i++) {
+    for(var i=0; i < arr.length; i++) {
 	    if( Array.isArray(arr[i]) ) {
 	    	innerFunction(arr[i], tgt);
 	    } else {

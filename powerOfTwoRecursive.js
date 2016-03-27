@@ -31,7 +31,7 @@ var isPowerOfTwo = function(n){
 };
 
 
-console.log("32 is " + isPowerOfTwo(32) );
+console.log("12 is " + isPowerOfTwo(12) );
 
 console.log("1024 is " + isPowerOfTwo(1024) );
 

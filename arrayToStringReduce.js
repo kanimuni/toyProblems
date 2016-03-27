@@ -29,4 +29,19 @@ var test = function(array) {
 //------------ Solution 2 using just recduce ----------------------------
 
 
+//------------ Solution 3 using recursion --------------------
 
+var messArray = function(array, i, resultString) {
+	i = i||0;
+	resultString = resultString || "";
+
+	if(i === array.length) {
+    return resultString;
+	}
+  
+  resultString += array[i].split("").sort().pop();
+
+  return messArray(array, i+1, resultString);
+
+};
+//------------ Solution 3 using recursion --------------------

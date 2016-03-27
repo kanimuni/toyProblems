@@ -43,4 +43,31 @@ var reduceZeros2 = function(array) {
 	return newArray;
 };
 
+// ------------------------------------------
+
+var reduceZeros3 = function(array, i, resultArray) {
+  i = i||0;
+  resultArray = resultArray||[];
+
+  if(i === array.length) {
+    return resultArray;
+  }
+
+  if(array[i] === 0) {
+    if(array[i+1] === 0) {
+      //do nothing
+    } else {
+      resultArray.push(array[i]);
+    }
+	} else {
+		resultArray.push(array[i]);
+	}
+
+	return reduceZeros(array, i+1, resultArray);
+};
+
+// console.log(reduceZeros3([1,0,0,2,0,3,0,0]));
+// ------------------------------------------
+
+
 console.log(reduceZeros2(arr));

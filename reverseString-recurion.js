@@ -78,3 +78,25 @@ var reverseArray = function(array, i, resultArray) {
 };
 
 console.log ( reverseArray(testarr) );
+
+// ----------------------------------------------------------------
+
+var reverseArrayInPlace = function(array, i) {
+  i = i||0;
+  var tmp = null;
+
+  if(array.length === 1) {
+    return array;
+  }
+
+  if( i === Math.floor(array.length/2) ) {
+    return array;
+  }
+  
+  tmp = array[i];
+  array[i] = array[array.length-1-i];
+  array[array.length-1-i] = tmp;
+
+
+  return reverseArrayInPlace(array, i+1);
+};

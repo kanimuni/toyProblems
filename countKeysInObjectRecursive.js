@@ -2,25 +2,38 @@
 // countKeysInObj(testobj, 'r') // 1
 // countKeysInObj(testobj, 'e') // 2
 
-var testobj = {'e': {'x':'y'}, 't':{'r': {'e':'r'}, 'p': {'y':'r'}},'y':'e'};
-
-var countKeysInObj = function(obj, key) {
+var countKeysInObject = function(object, targetKey) {
+  //declare result variable
   var result = 0;
-  //debugger;
-  var innerfunction = function(object, targetkey) {
-    for (var key in object) {
-      if(key === targetkey) {
+
+  //declare innerfunction
+var innerFunction = function(obj, target) {
+    //loop through each key using for in loop
+  for(var key in obj) {
+    if(key === target) {
+      if(Object.prototype.toString.call(obj[key] === "[object Object]")) {
         result++;
-      } else if (Object.prototype.toString.call(object[key]) === "[object Object]" ) {
-        innerfunction(object[key], targetkey);
+        innerFunction(obj[key], target);
+      } else {
+          result++;
+        }
+      } else {
+        if(Object.prototype.toString.call(obj[key]) === "[object Object]") {
+          innerFunction(obj[key], target);
+        } else {
+          continue;
+        }
       }
     }
   };
-
-  innerfunction(obj, key);
+  
+  //invoke the innerfunction with given arugument
+  innerFunction(object, targetKey);
+  //return the result
   return result;
 };
 
-//console.log(countKeysInObj(testobj, 'r'));
+var testobj = {'e': {'x':'y'}, 't':{'r': {'e':'r'}, 'p': {'y':'r'}},'y':'e'};
 
-//console.log(countKeysInObj(testobj, 'e'));
+console.log(countKeysInObject(testobj, 'r'));
+console.log(countKeysInObject(testobj, 'e'));

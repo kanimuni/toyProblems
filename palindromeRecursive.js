@@ -31,3 +31,31 @@ var palindromeRecursive = function(string) {
 
 
 //console.log(palindromeRecursive("racecar"));
+
+// ------------------------------------------
+
+
+var palindrome = function(string) {
+  debugger;
+  //base case1: if string length is 3 and first and last char are same
+  if( (string.length === 3) && (string[0] === string[2]) ) {
+    //yes: return true
+    return true;
+  }
+
+  //base case2: if string length is 2 and the two chars are same
+  if( (string.length === 2) && (string[0] === string[1]) ) {
+    //yes: return true
+    return true;
+  }
+
+
+  //check if the first and last letters are the same
+  if(string[0] === string[string.length-1]) {
+    //yes: recurse on the string minus those two characters
+    return palindrome(string.slice(1, string.length-1));
+  } else {
+    //no: return false;
+    return false;
+  }
+};

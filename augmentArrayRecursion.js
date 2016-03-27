@@ -9,7 +9,7 @@ var augmentArray = function(array, augment, i) {
 
   i = i || 0;
   //base case
-	if(i === array.length-1) {
+	if(i === array.length) {
 		//debugger;
 		return array;
 	}

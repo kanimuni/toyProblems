@@ -1,4 +1,5 @@
 //Check if two given collections equal deeply.
+
 //By that it means that each key and value passes a thripple equals test
 //The implementation should handle both arrays and objects
 
