@@ -1,10 +1,22 @@
-/*Add up all numbers in the list. [2,7,8,3,1,4] Returns 25*/
-//with a for loop
-
-//recursion
-var arr = [2,7,8,3,1,4];
+var arr = [2,7,8,3,1,4];  //total should be 25
 var nestedarr = [[10, 10],[10],10, 10, 10, [10, 10, [10, [10, 10], 10], 10, 10], 10,10]; //total should be 160
 
+
+//Add up all numbers in the lists
+//with a for loop
+//with reduce
+//recursion
+
+// using reduce
+
+var addArrReduce = function(array) {
+  return array.reduce(function(accumulator, item) {
+    return accumulator += item;
+  }, 0);
+};
+
+// --------------------------------------------------------------------
+//using recursion
 var addAllNumbersRecursion = function(array) {
   var result = 0;
 

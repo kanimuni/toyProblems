@@ -12,3 +12,6 @@ var totalEvenReduce = function(array) {
 };
 
 //console.log(totalEvenReduce(testArray));
+// ---------------------------------------------
+
+var totalEvenRecursion = function()

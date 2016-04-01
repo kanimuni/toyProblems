@@ -15,7 +15,34 @@ var countVowels = function(string, i, count) {
 
 };
 
-console.log( countVowels("kani muni hana aki") );
+// console.log( countVowels("kani muni hana aki") );
 
 // ---------------------------------------------
 
+var countVowelsLoop = function(string) {
+  var count = 0;
+  for(var i=0; i<string.length; i++) {
+    if(string[i].match(/[aeiou]/i)) {
+      count++;
+    }
+  }
+  return count;
+};
+
+// console.log( countVowels("kani muni hana aki") );
+
+// ---------------------------------------------
+
+var countVowelsReduce = function(string) {
+  var stringArr = string.split("");
+  return stringArr.reduce(function(accumulator, item) {
+    if(item.match(/[aeiou]/i)) {
+      accumulator++;
+      return accumulator;
+    } else {
+      return accumulator;
+    }
+  }, 0);
+};
+
+console.log( countVowelsReduce("kani muni hana aki") );

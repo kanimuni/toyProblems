@@ -21,3 +21,18 @@ var sumDigits = function(number, i, sum) {
 console.log (sumDigits(126) );
 console.log (sumDigits(49) );
 console.log (sumDigits(12) );
+
+// ---------------------------------------------
+
+var sumDigitsReduce = function(number) {
+	var numString = number.toString();
+	var numArr = numString.split("");
+
+	return numArr.reduce(function(accumulator, item) {
+    accumulator += Number(item);
+    return accumulator;
+	}, 0);
+};
+
+console.log( sumDigitsReduce(122) );
+

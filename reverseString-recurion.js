@@ -58,10 +58,10 @@ var reverseString2 = function(string) {
 };
 
 
-console.log( reverseString2("abc") );
+// console.log( reverseString2("abc") );
 
 // ----------------------------------------------------------------
-do the same for an array
+// do the same for an array
 var testarr = ['a','b','c','d'];
 
 var reverseArray = function(array, i, resultArray) {

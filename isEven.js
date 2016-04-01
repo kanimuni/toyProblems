@@ -12,3 +12,9 @@ var isEven = function(n) {
   }
   return isEven(n-2);
 };
+
+console.log( isEven(-10) );
+console.log( isEven(0) );
+console.log( isEven(10) );
+console.log( isEven(13) );
+console.log( isEven(-13) );
