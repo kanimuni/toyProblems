@@ -17,7 +17,7 @@ var countVowelsRecursion = function(string, i, count) {
 
 // console.log( countVowelsRecursion("kani muni hana aki") );
 
-// ---------------------------------------------
+// ----------------------------------------------
 
 var countVowelsLoop = function(string) {
   var count = 0;
