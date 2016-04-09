@@ -11,7 +11,19 @@ var totalEvenReduce = function(array) {
 	}, 0);
 };
 
-//console.log(totalEvenReduce(testArray));
+console.log(totalEvenReduce(testArray));
 // ---------------------------------------------
 
-var totalEvenRecursion = function()
+var totalEvenRecursion = function(array, total) {
+  total = total || 0;
+  if(array.length === 0) {
+    return total;
+  }
+  if(array[0] % 2 === 0) {
+    total += array[0];
+  }
+
+  return totalEvenRecursion(array.slice(1), total);
+
+};
+console.log( totalEvenRecursion(testArray) );

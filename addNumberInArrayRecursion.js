@@ -11,9 +11,12 @@ var nestedarr = [[10, 10],[10],10, 10, 10, [10, 10, [10, [10, 10], 10], 10, 10],
 
 var addArrReduce = function(array) {
   return array.reduce(function(accumulator, item) {
-    return accumulator += item;
+    accumulator += item;
+    return accumulator;
   }, 0);
 };
+
+// console.log( "total is " + addArrReduce([2,7,8,3,1,4]) );
 
 // --------------------------------------------------------------------
 //using recursion

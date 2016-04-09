@@ -47,3 +47,18 @@ var maxvalue = function(array) {  // function using while
   }
   return m;
   };
+
+
+// -------------------------
+
+var maxvalueReduce = function(array) {
+  return array.reduce(function(accumulator, item) {
+    if(item > accumulator) {
+      accumulator = item;
+    }
+    return accumulator;
+  }, 0);
+};
+
+console.log( maxvalueReduce(arr) );
+

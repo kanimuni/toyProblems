@@ -100,3 +100,5 @@ var reverseArrayInPlace = function(array, i) {
 
   return reverseArrayInPlace(array, i+1);
 };
+
+console.log(reverseArrayInPlace([1,2,3,4]));

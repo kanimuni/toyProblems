@@ -22,4 +22,16 @@ var augmentArray = function(array, augment, i) {
 	
 };
 
-console.log(augmentArray(arr, 5));
+// console.log(augmentArray(arr, 5));
+
+// ---------------------------------
+
+var augmentArrayReduce = function(array, augment) {
+	return array.reduce(function(accumulator, item) {
+		item.push(augment);
+		accumulator.push(item);
+		return accumulator;
+	}, []);
+};
+
+console.log( augmentArrayReduce(arr, 5) );

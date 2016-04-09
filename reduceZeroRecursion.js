@@ -71,3 +71,17 @@ var reduceZeros3 = function(array, i, resultArray) {
 
 
 console.log(reduceZeros2(arr));
+
+
+var reduceZreduce = function(array) {
+  return array.reduce(function(accumulator, item, key) {
+    if(item !== 0) {
+      accumulator.push(item);
+    } else {
+      if(array[key+1] !== 0) {
+        accumulator.push(item);
+      }
+    }
+    return accumulator;
+  }, []);
+};

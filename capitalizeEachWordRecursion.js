@@ -21,3 +21,16 @@ var capitalizeEachWord = function(array, i) {
 };
 
 console.log(capitalizeEachWord(testArr));
+
+
+// ----------------------------------
+
+var capitalizeEachWordReduce = function(array) {
+	return array.reduce(function(accumulator, item) {
+		var toPush = item[0].toUpperCase() + item.slice(1).toLowerCase();
+		accumulator.push(toPush);
+		return accumulator;
+	}, []);
+};
+
+// console.log(capitalizeEachWordReduce(testArr));

@@ -29,3 +29,19 @@ var sumOfEvenInNestedObject = function(object) {
 };
 
 console.log( sumOfEvenInNestedObject(myNestedObj) );
+
+// No innerfunction (post it note method)
+
+var nestedObjectSum = function(obj) {
+  var sum = 0;
+  for(var key in obj) {
+    if(Object.prototype.toString.call(obj[key]) === "[object Object]") {
+      sum += nestedObjectSum(obj[key]);
+    } else {
+      if(obj[key] % 2 === 0) {
+        sum += obj[key];  
+      }
+    }
+  }
+  return sum;
+};

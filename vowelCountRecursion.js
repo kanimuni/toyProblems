@@ -1,7 +1,7 @@
 // Write a recursive method called countVowels that returns the number of vowels in a given String
 // countVowels('abcedfg') ->2
 
-var countVowels = function(string, i, count) {
+var countVowelsRecursion = function(string, i, count) {
 	i = i||0;
 	count = count||0;
 
@@ -11,11 +11,11 @@ var countVowels = function(string, i, count) {
 
   if(string[i].match(/[aeiou]/i)) count++;
 
-  return countVowels(string, i+1, count);
+  return countVowelsRecursion(string, i+1, count);
 
 };
 
-// console.log( countVowels("kani muni hana aki") );
+// console.log( countVowelsRecursion("kani muni hana aki") );
 
 // ---------------------------------------------
 
@@ -46,3 +46,6 @@ var countVowelsReduce = function(string) {
 };
 
 console.log( countVowelsReduce("kani muni hana aki") );
+
+// ---------------------------------------------
+

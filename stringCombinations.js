@@ -1,19 +1,18 @@
-// Take a string and create all possible combinations 
-// out of that string.
+// Take a string and create all possible combinations of letters in that string.
 
 
 
-function getCombinations(chars) {
+function getCombinations(string) {
   var result = [];
   
-  var innerFunction = function(prefix, chars) {
-    for (var i = 0; i < chars.length; i++) {
-      result.push(prefix + chars[i]);
-      innerFunction(prefix + chars[i], chars.slice(i + 1));
+  var innerFunction = function(prefix, string) {
+    for (var i = 0; i < string.length; i++) {
+      result.push(prefix + string[i]);
+      innerFunction(prefix + string[i], string.slice(i + 1));
     }
   };
   
-  innerFunction('', chars);
+  innerFunction("", string);
   return result;
 }
 

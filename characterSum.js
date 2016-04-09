@@ -1,4 +1,5 @@
-// Given a string of arbitrary size, convert each character into its integer equivalent and sum the entirety.
+// Given a string of arbitrary size, convert each character 
+// into its integer equivalent and sum the entirety.
 
 // Examples
 // Input	        Output
@@ -20,3 +21,12 @@ function charSum (str) {
     }
   }, 0);
 }
+
+console.log( charSum("123") );
+console.log( charSum("0101") );
+console.log( charSum("so cool!!1!") );
+
+// ------------------------------------
+
+
+

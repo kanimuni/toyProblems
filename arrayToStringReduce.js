@@ -12,9 +12,12 @@ var test = function(array) {
 		return value.split('').sort().pop();
 	})
 	.reduce(function(accumulator, item) {
-		return accumulator + item;
+		accumulator += item;
+		return accumulator;
 	}, "");
 };
+
+// console.log( test(exampleArray));
 //------------ Solution 1 using both map and recduce --------------------
 
 
@@ -23,9 +26,12 @@ var exampleArray = ['kani', 'muni', 'aki', 'hana', 'ichizuka'];
 
 var test = function(array) {
 	return array.reduce(function(accumulator, item) {
-		return accumulator + item.split("").sort().pop();
+		accumulator += item.split("").sort().pop();
+		return accumulator;
 	}, "" );
 };
+
+// console.log( test(exampleArray));
 //------------ Solution 2 using just recduce ----------------------------
 
 

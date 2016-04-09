@@ -34,3 +34,19 @@ function isSubset (array, sub) {
   }
   return result;
 }
+
+
+var arraySetReduce = function(array, sub) {
+  return sub.reduce(function(accumulator, item) {
+     if(accumulator && array.includes(item)) {
+       var index = array.indexOf(item);
+       array.splice(index, 1);
+       accumulator = true;
+     } else {
+       accumulator = false;
+     }
+    return accumulator;
+   }, true);
+};
+
+console.log( arraySetReduce([ 2, 2, 2, 3, 4 ], [ 2, 4, 3]) );
